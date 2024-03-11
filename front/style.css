@@ -1,0 +1,124 @@
+.body {
+    background-color: #252525;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 80vw;
+    height: 80vh;
+    background-color: #616161;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        flex-direction: column;
+        display: inline-block;
+        overflow-y: auto;
+    }
+
+    .calculator, .history-display {
+        width: 100% !important;
+    }
+}
+
+.title-font {
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    padding: 2vw;
+}
+
+
+/* Calculator styles */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.calculator {
+    border: 1px solid #616161;
+    border-radius: 5px;
+    width: 50vw;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 10vh;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-right: 2vw;
+    padding-left: 1vw;
+    font-size: 4vh;
+}
+
+button {
+    height: 6vh;
+    font-size: 2vh!important;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1vw;
+    padding: 1vw;
+}
+
+/* History styles */
+.history-display {
+    height: 101%;
+    background-color: #252525;
+    color: #fff;
+    font-size: 1vw;
+    overflow: auto;
+}
+
+.history-display::-webkit-scrollbar {
+    width: 10px;
+    background-color: #252525;
+}
+
+.history-display::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #252525;
+}
+
+.history-display::-webkit-scrollbar-track {
+    background-color: #252525;
+}
+
+.history-entry {
+    margin: 1.5vw;
+}
+
+.history-entry .date-time {
+    font-size: 1vw;
+    color: #BDBDBD;
+}
+
+.history-entry .equation {
+    font-size: 1vw;
+    color: #BDBDBD;
+}
+
+.history-entry .result {
+    font-size: 2vw;
+    font-weight: bold;
+}
